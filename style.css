@@ -6,3 +6,93 @@
 body{
     font-family: "Poppins", sans-serif;
 }
+
+.container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.calculator{
+    width: 400px;
+    background-color: #585f6e;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 5px 5px 30px 10px rgba(0, 0,0, 0.3);
+}
+
+/*  calculator input */
+.calc-input{
+    width: 100%;
+    text-align: right;
+    font-size: 35px;
+    border: none;
+    background-color: #585f6e;
+    color: #54b662;
+    padding: 10px;
+}
+#ope-input{
+    font-size: 20px;
+    color: #fff;
+}
+
+/* css grid used for the buttons */
+.cal-grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 15px;
+}
+
+.equal{
+    grid-column: span 2;
+    border-radius: 50px;
+
+}
+
+/* button */
+button{
+    padding: 20px;
+    font-size: 25px;
+    border-radius: 45%;
+    border: none;
+    cursor: pointer;
+}
+button:hover{
+    opacity: 0.5;
+}
+
+/* operation */
+.operation{
+    background-color: #54b662;
+    color: #fff;
+}
+
+
+/* history */
+.history-icon{
+    color: #fff;
+    font-size: 25px;
+    position: relative;
+    left: 2%;
+    cursor: pointer;
+}
+.history-page{
+    position: absolute;
+    background-color: #4daf56;
+    height: 410px;
+    width: 380px;
+    padding: 18px;
+    border-radius: 10px;
+    font-size: 25px;
+    color: #fff;
+    overflow-y: auto;
+    display: none;
+}
+
+.history-page.active{
+    display: flex;
+    flex-direction: column;
+
+}
